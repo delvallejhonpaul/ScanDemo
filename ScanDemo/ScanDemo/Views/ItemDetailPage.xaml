@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ScanDemo.Views.ItemDetailPage"
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="30">
+        <Label Text="Item:" FontSize="Large" />
+        <Label Text="{Binding Item.Text}" d:Text="Item name" FontAttributes="Bold" FontSize="Subtitle"/>
+        <Label Margin="0,20,0,0" Text="Price:" FontSize="Large"  />
+        <Label Text="{Binding Item.Price}" d:Text="Item description" FontAttributes="Bold" FontSize="Subtitle"/>
+        <Button x:Name="btnSubmit" Clicked="OnSubmit" Text="Pay Now" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5" />
+        <Button x:Name="btnBack" Clicked="btnBack_Clicked"  Text="Back" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5" />
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScanDemo.Views.LoginPage">
+    <ContentPage.Content>
+        <Grid >
+            <Image  Aspect="Fill"  Source="maco.jpg"/>
+            <!-- Place here the rest of the layout for the page. -->
+            <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
+
+                <BoxView HeightRequest="10"/>
+
+                <Frame BackgroundColor="Transparent" HasShadow="False">
+                    <StackLayout Orientation="Vertical" Spacing="10">
+                        <Label  TextColor="White" Text="Login" FontSize="Title" />
+                        <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"   
+                           PlaceholderColor="White"   
+                           Keyboard="Email"  
+                           TextColor="White"/>
+                        <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
+                           PlaceholderColor="White" 
+                           IsPassword="True"  
+                           TextColor="White"/>
+                        <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5" CornerRadius="25" />
+                        <Button Clicked="Button_Clicked" Text="Register" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5" CornerRadius="25" />
+                    </StackLayout>
+                </Frame>
+                
+            </StackLayout>
+        </Grid >
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             mc:Ignorable="d"
+             x:Class="ScanDemo.Views.ScanPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <Grid >
+            <Image  Aspect="Fill"  Source="maco.jpg"/>
+            <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
+
+
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button  x:Name="Email" Grid.Column="0" FontSize="25" Text="{Binding Balance}" CornerRadius="20" 
+                                 BackgroundColor="White"  TextColor="Black" />
+
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="0,30,0,-30">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button x:Name="btnRefresh" Grid.Column="0" Text="Refresh Balance" CornerRadius="20" WidthRequest="140" 
+            HorizontalOptions="Center" Clicked="Button_Clicked" BackgroundColor="SkyBlue" TextColor="Black" />
+                        <Button Text="Cash In" Grid.Column="1" WidthRequest="140" 
+            HorizontalOptions="Center" BackgroundColor="SkyBlue" Clicked="OnCashIn" CornerRadius="20" />
+                    </Grid>
+                    <Grid Grid.Row="2" Margin="0,35,0,-35">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <BoxView HeightRequest="3" VerticalOptions="Center" Grid.Column="0" Color="Black" IsVisible="true"/>
+                    </Grid>
+                    <Grid Grid.Row="3" Margin="0,50,0,-50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Clicked="Email_Clicked" Grid.Column="0" Text="SCAN NOW" CornerRadius="20" 
+                                 BackgroundColor="White"  TextColor="Black" />
+
+                    </Grid>
+
+
+                </Grid>
+                <Button Margin="0,00,0,-40" Grid.Column="0" Clicked="Button_Clicked_1" Text="About Us" CornerRadius="20" WidthRequest="140" 
+            HorizontalOptions="Center" BackgroundColor="SkyBlue" TextColor="Black" />
+                <Button Margin="0,10,0,0" Text="Schedule" Clicked="Button_Clicked_2" Grid.Column="1" WidthRequest="140" 
+            HorizontalOptions="Center" BackgroundColor="SkyBlue"  CornerRadius="20" />
+            </StackLayout>
+        </Grid>
+        
+
+
+    </ContentPage.Content>
+</ContentPage>
